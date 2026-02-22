@@ -3,145 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javohir Akramov - Resume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Javohir Akramov</title>
     <style>
-        :root {
-            --bg: #080c14;
-            --surface: #0e1219;
-            --surface-hover: #0e1219;
-            --surface-raised: #141a24;
-            --tile-bg: #111820;
-            --border: #1e2736;
-            --border-subtle: #161d28;
-            --border-hover: #2a3444;
-            --text: #c8cdd8;
-            --text-secondary: #7a8394;
-            --accent: #d4a27f;
-            --accent-light: #e4be9e;
-            --accent-warm: rgba(212, 162, 127, 0.12);
-            --accent-warm-solid: #1c1610;
-            --heading: #eaedf2;
-        }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.65;
-            min-height: 100vh;
+            font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #fafaf8;
+            color: #1d1d1f;
+            line-height: 1.68;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         .page {
-            max-width: 780px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 72px 48px 64px;
+            padding: 80px 40px 96px;
         }
 
-        /* ======== HEADER ======== */
+        /* ---- Header ---- */
         header {
             text-align: center;
-            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 64px;
         }
 
         header h1 {
-            font-family: 'DM Serif Display', Georgia, serif;
-            font-size: 4.5rem;
+            font-family: 'Times New Roman', Times, Georgia, serif;
+            font-size: 5rem;
             font-weight: 400;
-            color: var(--heading);
-            letter-spacing: -0.5px;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            color: #1d1d1f;
+            letter-spacing: -1px;
+            line-height: 1.05;
+            margin-bottom: 16px;
         }
 
         .contact {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
+            font-family: 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+            font-size: 0.78rem;
+            color: #86868b;
+            letter-spacing: 0.02em;
         }
 
         .contact a {
-            color: var(--text-secondary);
+            color: #86868b;
             text-decoration: none;
-            padding: 5px 14px;
-            border-radius: 100px;
-            border: 1px solid var(--border);
-            transition: all 0.2s ease;
-            font-size: 0.82rem;
-            font-weight: 500;
-            letter-spacing: 0.01em;
+            transition: color 0.2s ease;
         }
 
         .contact a:hover {
-            color: var(--accent);
-            border-color: var(--accent);
-            background: var(--accent-warm);
+            color: #1d1d1f;
         }
 
         .contact .sep {
-            color: var(--border);
-            font-size: 0.5rem;
-            margin: 0 4px;
+            margin: 0 10px;
+            color: #d2d2d7;
         }
 
-        /* ======== SECTIONS ======== */
+        /* ---- Sections ---- */
         .section {
-            margin-bottom: 80px;
-        }
-
-        .section:last-child {
-            margin-bottom: 0;
+            margin-bottom: 64px;
         }
 
         .section-title {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 3.5px;
-            margin-bottom: 28px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
+            font-family: 'Times New Roman', Times, Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #1d1d1f;
+            letter-spacing: 0.01em;
+            margin-bottom: 32px;
         }
 
-        .section-title::after {
-            content: '';
-            flex: 1;
-            height: 0.5px;
-            background: var(--border);
-        }
-
-        /* ======== ENTRY CARDS ======== */
+        /* ---- Entries ---- */
         .entry {
-            margin-bottom: 24px;
-            padding: 24px 28px;
-            background: var(--surface);
-            border: 1px solid var(--border-subtle);
-            border-left: 2px solid transparent;
-            border-radius: 10px;
-            transition: all 0.25s ease;
+            padding: 24px 0 24px 0;
+            border-bottom: 1px solid #e8e8e8;
             position: relative;
+            border-left: 2px solid transparent;
+            padding-left: 0;
+            transition: border-color 0.2s ease, padding-left 0.2s ease;
         }
 
-        .entry:last-child {
-            margin-bottom: 0;
+        .entry:first-of-type {
+            padding-top: 0;
+        }
+
+        .entry:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .entry:hover {
-            border-color: var(--border-hover);
-            border-left-color: var(--accent);
-            background: var(--surface-hover);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+            border-left-color: #1d1d1f;
+            padding-left: 16px;
         }
 
         .entry-header {
@@ -150,22 +106,21 @@
             align-items: baseline;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 3px;
+            margin-bottom: 1px;
         }
 
         .entry-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--heading);
-            letter-spacing: -0.01em;
+            font-family: 'Times New Roman', Times, Georgia, serif;
+            font-size: 1.08rem;
+            font-weight: 400;
+            color: #1d1d1f;
         }
 
         .entry-date {
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: var(--accent);
+            font-size: 0.8rem;
+            color: #86868b;
             white-space: nowrap;
-            opacity: 0.8;
+            font-weight: 400;
         }
 
         .entry-subtitle {
@@ -174,34 +129,33 @@
             align-items: baseline;
             flex-wrap: wrap;
             gap: 4px;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .entry-role {
             font-style: italic;
-            color: var(--accent-light);
-            font-size: 0.88rem;
-            font-weight: 400;
+            color: #6e6e73;
+            font-size: 0.9rem;
         }
 
         .entry-location {
             font-size: 0.8rem;
-            color: var(--text-secondary);
+            color: #86868b;
         }
 
-        /* ======== LISTS ======== */
+        /* ---- Lists ---- */
         ul {
             list-style: none;
-            padding-left: 0;
+            padding: 0;
         }
 
         ul li {
             position: relative;
-            padding-left: 14px;
-            margin-bottom: 6px;
-            font-size: 0.86rem;
-            color: var(--text);
-            line-height: 1.7;
+            padding-left: 16px;
+            margin-bottom: 4px;
+            font-size: 0.87rem;
+            color: #424245;
+            line-height: 1.72;
         }
 
         ul li:last-child {
@@ -209,138 +163,92 @@
         }
 
         ul li::before {
-            content: '';
+            content: '\2013';
             position: absolute;
             left: 0;
-            top: 10px;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: var(--accent);
-            opacity: 0.6;
+            color: #c7c7cc;
+            font-size: 0.82rem;
         }
 
-        /* ======== SKILLS GRID ======== */
+        /* ---- Skills ---- */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 28px 48px;
         }
 
-        .skill-tile {
-            background: var(--tile-bg);
-            border: 1px solid var(--border-subtle);
-            border-radius: 10px;
-            padding: 20px 22px;
-            transition: all 0.25s ease;
-        }
+        .skill-item {}
 
-        .skill-tile:hover {
-            border-color: var(--border-hover);
-            background: var(--surface-raised);
-        }
-
-        .skill-tile-label {
+        .skill-label {
             font-size: 0.68rem;
-            font-weight: 700;
-            color: var(--accent);
+            font-weight: 600;
+            color: #86868b;
             text-transform: uppercase;
             letter-spacing: 2.5px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+            font-variant: small-caps;
         }
 
-        .skill-tile-content {
-            font-size: 0.84rem;
-            color: var(--text);
-            line-height: 1.7;
+        .skill-value {
+            font-size: 0.87rem;
+            color: #424245;
+            line-height: 1.72;
         }
 
-        /* ======== SCROLL ANIMATIONS ======== */
+        /* ---- Scroll reveal ---- */
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
+            transition: opacity 0.4s ease;
         }
 
         .reveal.visible {
             opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.4s ease, transform 0.4s ease;
         }
 
-        /* ======== RESPONSIVE ======== */
-        @media (max-width: 640px) {
+        /* ---- Responsive ---- */
+        @media (max-width: 600px) {
             .page {
-                padding: 48px 20px 36px;
+                padding: 48px 24px 64px;
             }
 
             header {
-                margin-bottom: 56px;
+                margin-bottom: 48px;
+                padding-bottom: 32px;
             }
 
             header h1 {
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
-
-            .contact {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .contact .sep { display: none; }
 
             .section {
-                margin-bottom: 56px;
-            }
-
-            .entry {
-                padding: 18px 20px;
+                margin-bottom: 48px;
             }
 
             .entry-header,
             .entry-subtitle {
                 flex-direction: column;
-            }
-
-            .entry-date {
-                margin-top: 2px;
-            }
-
-            .entry-location {
-                margin-top: 2px;
+                gap: 2px;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .contact .sep {
+                margin: 0 6px;
             }
         }
 
-        /* ======== PRINT ======== */
+        /* ---- Print ---- */
         @media print {
-            body { background: white; color: #222; }
             .page { padding: 0; max-width: 100%; }
-            header { margin-bottom: 28px; }
-            header h1 { color: #111; font-size: 2.4rem; }
-            .section { margin-bottom: 20px; }
-            .section-title { color: #333; }
-            .section-title::after { background: #ccc; }
-            .entry {
-                background: none; border: none; border-left: none;
-                padding: 0 0 10px 0; border-bottom: 1px solid #eee;
-                border-radius: 0; margin-bottom: 12px;
-            }
-            .entry:hover { transform: none; box-shadow: none; border-left-color: transparent; }
-            .entry-title { color: #111; }
-            .entry-role { color: #555; }
-            .entry-date { color: #555; }
-            .entry-location { color: #555; }
-            ul li { color: #222; }
-            ul li::before { background: #555; }
-            .skills-grid { display: block; }
-            .skill-tile { background: none; border: none; padding: 0 0 8px 0; border-radius: 0; }
-            .skill-tile-label { color: #333; }
-            .skill-tile-content { color: #222; }
-            .contact a { border: none; background: none; padding: 0; color: #333; }
-            .reveal { opacity: 1 !important; transform: none !important; }
+            header { margin-bottom: 24px; padding-bottom: 16px; }
+            header h1 { font-size: 2.4rem; }
+            .section { margin-bottom: 16px; }
+            .entry { padding: 10px 0; }
+            .entry:hover { border-left-color: transparent; padding-left: 0; }
+            .reveal { opacity: 1 !important; }
         }
     </style>
 </head>
@@ -349,16 +257,13 @@
         <header>
             <h1>Javohir Akramov</h1>
             <div class="contact">
-                <a href="mailto:jra131@georgetown.edu">jra131@georgetown.edu</a>
-                <span class="sep">&bull;</span>
-                <a href="https://linkedin.com/in/javohirakramov/" target="_blank">linkedin.com/in/javohirakramov</a>
+                <a href="mailto:jra131@georgetown.edu">jra131@georgetown.edu</a><span class="sep">|</span><a href="https://linkedin.com/in/javohirakramov/" target="_blank">linkedin.com/in/javohirakramov</a>
             </div>
         </header>
 
-        <!-- Education -->
-        <div class="section">
+        <div class="section reveal">
             <div class="section-title">Education</div>
-            <div class="entry reveal">
+            <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Georgetown University in Qatar</span>
                     <span class="entry-date">Aug 2023 &ndash; May 2027</span>
@@ -366,7 +271,7 @@
                 <div class="entry-subtitle">
                     <span class="entry-role">Bachelor of Science in Foreign Service (BSFS) &ndash; GPA: 3.8/4.00</span>
                 </div>
-                <ul class="edu-details">
+                <ul>
                     <li>Major: International Economics; Minor: Government</li>
                     <li>Relevant coursework: Hedge Funds, Private Equity, and Alternative Investments; Global Business, Finance, and Accounting; International Finance; Intermediate Microeconomics; Intermediate Macroeconomics</li>
                     <li>Achievements: Student Experience Fund ($5000), Dean&rsquo;s List (every semester)</li>
@@ -374,11 +279,10 @@
             </div>
         </div>
 
-        <!-- Selected Venture & Startup Experience -->
-        <div class="section">
+        <div class="section reveal">
             <div class="section-title">Selected Venture &amp; Startup Experience</div>
 
-            <div class="entry reveal">
+            <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">AloqaVentures</span>
                     <span class="entry-date">May 2025 &ndash; Aug 2025</span>
@@ -394,7 +298,7 @@
                 </ul>
             </div>
 
-            <div class="entry reveal">
+            <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Strategy Hub Qatar</span>
                     <span class="entry-date">Aug 2025 &ndash; Dec 2025</span>
@@ -410,7 +314,7 @@
                 </ul>
             </div>
 
-            <div class="entry reveal">
+            <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Unicraft</span>
                     <span class="entry-date">Apr 2024 &ndash; Sep 2024</span>
@@ -426,7 +330,7 @@
                 </ul>
             </div>
 
-            <div class="entry reveal">
+            <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Sarmo Labs</span>
                     <span class="entry-date">Jan 2024 &ndash; Jun 2024</span>
@@ -442,10 +346,9 @@
             </div>
         </div>
 
-        <!-- Additional Experience -->
-        <div class="section">
+        <div class="section reveal">
             <div class="section-title">Additional Experience</div>
-            <div class="entry reveal">
+            <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Georgetown University in Qatar</span>
                     <span class="entry-date">Jul 2024 &ndash; Apr 2025</span>
@@ -459,25 +362,24 @@
             </div>
         </div>
 
-        <!-- Skills & Interests -->
-        <div class="section">
+        <div class="section reveal">
             <div class="section-title">Skills &amp; Interests</div>
             <div class="skills-grid">
-                <div class="skill-tile reveal">
-                    <div class="skill-tile-label">Languages</div>
-                    <div class="skill-tile-content">English (Professional), Russian (Bilingual), Uzbek (Native), Tajik (Bilingual)</div>
+                <div class="skill-item">
+                    <div class="skill-label">Languages</div>
+                    <div class="skill-value">English (Professional), Russian (Bilingual), Uzbek (Native), Tajik (Bilingual)</div>
                 </div>
-                <div class="skill-tile reveal">
-                    <div class="skill-tile-label">Finance</div>
-                    <div class="skill-tile-content">Financial statement &amp; ratio analysis; cash flow analysis; valuation (TVM, bonds/stocks); capital budgeting; capital structure/leverage; portfolio analysis &amp; asset allocation (MPT); alternative investments (HF/PE)</div>
+                <div class="skill-item">
+                    <div class="skill-label">Finance</div>
+                    <div class="skill-value">Financial statement &amp; ratio analysis; cash flow analysis; valuation (TVM, bonds/stocks); capital budgeting; capital structure/leverage; portfolio analysis &amp; asset allocation (MPT); alternative investments (HF/PE)</div>
                 </div>
-                <div class="skill-tile reveal">
-                    <div class="skill-tile-label">Tools</div>
-                    <div class="skill-tile-content">Excel, PowerPoint, Stata, Salesforce, Bloomberg, Figma, Claude Code, Lovable, Replit</div>
+                <div class="skill-item">
+                    <div class="skill-label">Tools</div>
+                    <div class="skill-value">Excel, PowerPoint, Stata, Salesforce, Bloomberg, Figma, Claude Code, Lovable, Replit</div>
                 </div>
-                <div class="skill-tile reveal">
-                    <div class="skill-tile-label">Interests</div>
-                    <div class="skill-tile-content">Vibe coding, prediction markets, fitness, tennis, museums, chess, biographies</div>
+                <div class="skill-item">
+                    <div class="skill-label">Interests</div>
+                    <div class="skill-value">Vibe coding, prediction markets, fitness, tennis, museums, chess, biographies</div>
                 </div>
             </div>
         </div>
@@ -485,22 +387,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.reveal');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const el = entry.target;
-                        const parent = el.parentElement;
-                        const siblings = Array.from(parent.querySelectorAll(':scope > .reveal'));
-                        const index = siblings.indexOf(el);
-                        const delay = index * 80;
-                        el.style.transitionDelay = delay + 'ms';
-                        el.classList.add('visible');
-                        observer.unobserve(el);
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.08 });
-            elements.forEach(el => observer.observe(el));
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         });
     </script>
 </body>
