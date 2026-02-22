@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javohir Akramov - Resume</title>
+    <style>
+        :root {
+            --bg: #1a1a2e;
+            --surface: #1e1e34;
+            --surface-light: #262645;
+            --border: #3a3a5c;
+            --text: #e8e8f0;
+            --text-secondary: #a0a0bc;
+            --accent: #d4a27f;
+            --accent-light: #e8c4a8;
+            --heading: #f0f0f8;
+            --link: #d4a27f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 48px 52px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--heading);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        header .contact {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        header .contact a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        header .contact a:hover {
+            text-decoration: underline;
+            color: var(--accent-light);
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+        }
+
+        .entry {
+            margin-bottom: 18px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 2px;
+        }
+
+        .entry-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--heading);
+        }
+
+        .entry-date {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .entry-subtitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .entry-role {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .entry-location {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 5px;
+            font-size: 0.93rem;
+            color: var(--text);
+        }
+
+        ul li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            font-size: 0.93rem;
+        }
+
+        .skills-grid .skill-row {
+            margin-bottom: 6px;
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: var(--accent-light);
+        }
+
+        .edu-details li {
+            font-size: 0.93rem;
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                margin: 16px 8px;
+                padding: 28px 20px;
+            }
+
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            .entry-header,
+            .entry-subtitle {
+                flex-direction: column;
+            }
+
+            .entry-date,
+            .entry-location {
+                margin-top: 2px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: #222;
+            }
+            .page {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+                background: white;
+            }
+            header {
+                border-bottom-color: #333;
+            }
+            header h1 { color: #111; }
+            .section-title { color: #333; border-bottom-color: #ccc; }
+            .entry-title { color: #111; }
+            .entry-role, .entry-date, .entry-location, header .contact { color: #555; }
+            ul li { color: #222; }
+            ul li::before { color: #333; }
+            .skill-label { color: #333; }
+            a { color: #333; }
+            :root {
+                --border: #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Javohir Akramov</h1>
+            <div class="contact">
+                <a href="mailto:jra131@georgetown.edu">jra131@georgetown.edu</a> &ensp;|&ensp;
+                <a href="https://linkedin.com/in/javohirakramov/" target="_blank">linkedin.com/in/javohirakramov/</a>
+            </div>
+        </header>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Georgetown University in Qatar</span>
+                    <span class="entry-date">Aug 2023 &ndash; May 2027</span>
+                </div>
+                <div class="entry-subtitle">
+                    <span class="entry-role">Bachelor of Science in Foreign Service (BSFS) &ndash; GPA: 3.8/4.00</span>
+                </div>
+                <ul class="edu-details">
+                    <li>Major: International Economics; Minor: Government</li>
+                    <li>Relevant coursework: Hedge Funds, Private Equity, and Alternative Investments; Global Business, Finance, and Accounting; International Finance; Intermediate Microeconomics; Intermediate Macroeconomics</li>
+                    <li>Achievements: Student Experience Fund ($5000), Dean's List (every semester)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Selected Venture & Startup Experience -->
+        <div class="section">
+            <div class="section-title">Selected Venture &amp; Startup Experience</div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">AloqaVentures</span>
+                    <span class="entry-date">May 2025 &ndash; Aug 2025</span>
+                </div>
+                <div class="entry-subtitle">
+                    <span class="entry-role">Venture Analyst Intern</span>
+                    <span class="entry-location">Tashkent, Uzbekistan</span>
+                </div>
+                <ul>
+                    <li>Conducted end-to-end due diligence on a seed-stage AI startup, assessing the market landscape, 10+ competitors, business model, and key risk areas; produced an investment memo and pitch deck used in investment decision.</li>
+                    <li>Screened and evaluated 10+ startups across AI, fintech, mobility, and staffing tech through 20+ founder calls, 10+ market analyses, and 10+ financial reviews to support pipeline decisions.</li>
+                    <li>Supported portfolio and platform initiatives by building partnerships with Qatari institutions (e.g., MBK Holding, QSTP) and assisting founders with early hiring and team-building efforts.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Strategy Hub Qatar</span>
+                    <span class="entry-date">Aug 2025 &ndash; Dec 2025</span>
+                </div>
+                <div class="entry-subtitle">
+                    <span class="entry-role">Consulting Intern</span>
+                    <span class="entry-location">Doha, Qatar</span>
+                </div>
+                <ul>
+                    <li>Mapped Qatar's startup and investor ecosystem (10+ VC funds, 100+ startups) for a ministry-backed innovation initiative, producing a structured landscape for strategic planning.</li>
+                    <li>Benchmarked 5+ global tech hubs to identify policy and ecosystem design levers for startup formation, talent development, and public-private collaboration.</li>
+                    <li>Synthesized research into 15+ executive presentations and built a database of 50+ experts and mentors to support innovation programming and stakeholder engagement.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Unicraft</span>
+                    <span class="entry-date">Apr 2024 &ndash; Sep 2024</span>
+                </div>
+                <div class="entry-subtitle">
+                    <span class="entry-role">Co-Founder &amp; COO</span>
+                    <span class="entry-location">Hybrid</span>
+                </div>
+                <ul>
+                    <li>Co-founded and operated a mentorship platform connecting high school students with college mentors, supporting 1,000+ students, 100+ mentors, and 10+ workshops/sessions over 6 months.</li>
+                    <li>Built and managed a 15-person team, establishing operating structure, task workflows, and a weekly execution cadence across 6 functional areas (including outreach, content, operations, and mentorship matching).</li>
+                    <li>Drove user and mentor growth through social media and onboarding initiatives, generating 50+ mentor sign-ups and increasing monthly active participants to 500+.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Sarmo Labs</span>
+                    <span class="entry-date">Jan 2024 &ndash; Jun 2024</span>
+                </div>
+                <div class="entry-subtitle">
+                    <span class="entry-role">Business Development Intern</span>
+                    <span class="entry-location">Hybrid</span>
+                </div>
+                <ul>
+                    <li>Built regional prospect pipelines and partnership outreach for two AI products in Qatar, generating 30+ outreach interactions, 10+ discovery calls, and 20+ user/commercial leads.</li>
+                    <li>Researched 15+ AI tools and competitors and customer needs across 3 user segments, translating findings into 10+ product improvement recommendations for founders and developers.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Additional Experience -->
+        <div class="section">
+            <div class="section-title">Additional Experience</div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Georgetown University in Qatar</span>
+                    <span class="entry-date">Jul 2024 &ndash; Apr 2025</span>
+                </div>
+                <div class="entry-subtitle">
+                    <span class="entry-role">Student Assistant - Office of External Relations</span>
+                </div>
+                <ul>
+                    <li>Managed stakeholder research and database tracking (400 alumni, 50 external organizations) and supported logistics for 10+ high-profile events; prepared reports, presentations, and stakeholder briefs.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills & Interests -->
+        <div class="section">
+            <div class="section-title">Skills &amp; Interests</div>
+            <div class="skills-grid">
+                <div class="skill-row"><span class="skill-label">Languages:</span> English (Professional), Russian (Bilingual), Uzbek (Native), Tajik (Bilingual)</div>
+                <div class="skill-row"><span class="skill-label">Finance:</span> Financial statement &amp; ratio analysis; cash flow analysis; valuation (TVM, bonds/stocks); capital budgeting; capital structure/leverage; portfolio analysis &amp; asset allocation (MPT); alternative investments (HF/PE)</div>
+                <div class="skill-row"><span class="skill-label">Tools:</span> Excel, PowerPoint, Stata, Salesforce, Bloomberg, Figma, Claude Code, Lovable, Replit</div>
+                <div class="skill-row"><span class="skill-label">Interests:</span> Vibe coding, prediction markets, fitness, tennis, museums, chess, biographies</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
